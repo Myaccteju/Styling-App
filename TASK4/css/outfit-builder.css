@@ -1,0 +1,46 @@
+body{
+    margin:0;
+    background:#0b1020;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+.header{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 25px;
+    border-bottom:1px solid #222;
+}
+
+.main-grid{
+    display:grid;
+    grid-template-columns:300px 1fr 350px;
+    gap:20px;
+    padding:20px;
+    min-height:650px;
+}
+
+.sidebar,
+.canvas-area,
+.ai-panel{
+    background:#131a2b;
+    border-radius:20px;
+    padding:20px;
+}
+
+.bottom-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    padding:0 20px 20px;
+}
+
+.how-it-works,
+.saved-outfits{
+    background:#131a2b;
+    border-radius:20px;
+    padding:20px;
+    min-height:200px;
+}
