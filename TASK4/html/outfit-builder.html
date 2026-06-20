@@ -1,46 +1,140 @@
-<link rel="stylesheet" href="../css/outfit-builder.css">
-<script src="../js/outfit-builder.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleSync AI</title>
+
+    <link rel="stylesheet" href="../css/outfit-builder.css">
+</head>
 
 <body>
 
-<header class="header">
-    <div class="logo">StyleSync AI</div>
+    <!-- HEADER -->
+    <header class="header">
 
-    <nav>
-        <button>Studio</button>
-        <button>Wardrobe</button>
-        <button>Inspiration</button>
-    </nav>
+        <div class="logo">StyleSync AI</div>
 
-    <button class="save-btn">Save Outfit</button>
-</header>
+        <nav>
+            <button>Studio</button>
+            <button>Wardrobe</button>
+            <button>Inspiration</button>
+        </nav>
 
-<main class="main-grid">
+        <button class="save-btn">Save Outfit</button>
 
-    <aside class="sidebar">
-        Clothing Library
-    </aside>
+    </header>
 
-    <section class="canvas-area">
-        Avatar Canvas
+    <!-- MAIN CONTENT -->
+    <main class="main-grid">
+
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>Clothing Library</h2>
+
+            <div class="upload-box">
+
+                <input
+                    type="file"
+                    id="clothesUpload"
+                    accept="image/*"
+                    multiple>
+
+            </div>
+
+            <div class="filters">
+
+                <button>All</button>
+                <button>T-Shirts</button>
+                <button>Shirts</button>
+
+            </div>
+
+            <div id="clothesContainer"></div>
+
+        </aside>
+
+        <!-- CENTER CANVAS -->
+        <section class="canvas-area">
+
+            <h2>Avatar Canvas</h2>
+
+            <div class="avatar-selector">
+
+                <button id="maleBtn" class="active-avatar">
+                    Male Slim
+                </button>
+
+                <button id="femaleBtn">
+                    Female Slim
+                </button>
+
+            </div>
+
+            <div class="avatar-container">
+
+                <img
+                    id="avatarImage"
+                    class="avatar"
+                    src="../assets/Avatar/maleslim.png"
+                    alt="Avatar">
+
+                <img
+                    id="topLayer"
+                    class="top-layer"
+                    src=""
+                    alt="Top Layer">
+
+                <img
+                    id="bottomLayer"
+                    class="bottom-layer"
+                    src=""
+                    alt="Bottom Layer">
+
+            </div>
+
+        </section>
+
+        <!-- RIGHT PANEL -->
+        <aside class="ai-panel">
+
+            <h2>AI Assistant</h2>
+
+            <p>
+                Upload clothes and click them to try them on.
+            </p>
+
+        </aside>
+
+    </main>
+
+    <!-- BOTTOM SECTION -->
+    <section class="bottom-grid">
+
+        <div class="how-it-works">
+
+            <h3>How It Works</h3>
+
+            <p>
+                Upload clothes → Select avatar → Build outfits → Get AI suggestions
+            </p>
+
+        </div>
+
+        <div class="saved-outfits">
+
+            <h3>Saved Outfits</h3>
+
+            <p>No outfits saved yet.</p>
+
+        </div>
+
     </section>
 
-    <aside class="ai-panel">
-        AI Assistant
-    </aside>
-
-</main>
-
-<section class="bottom-grid">
-
-    <div class="how-it-works">
-        How It Works
-    </div>
-
-    <div class="saved-outfits">
-        Saved Outfits
-    </div>
-
-</section>
+    <script src="../js/outfit-builder.js"></script>
 
 </body>
+
+</html>

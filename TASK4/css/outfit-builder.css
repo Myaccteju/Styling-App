@@ -2,33 +2,80 @@ body{
     margin:0;
     background:#0b1020;
     color:white;
-    font-family:Arial,sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* HEADER */
 
 .header{
     height:70px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:0 25px;
-    border-bottom:1px solid #222;
+    padding:0 30px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    background:#09101f;
 }
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#8b5cf6;
+}
+
+/* NAVIGATION */
+
+nav{
+    display:flex;
+    gap:15px;
+}
+
+nav button,
+.save-btn{
+    background:#1b2236;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+nav button:hover,
+.save-btn:hover{
+    background:#7c3aed;
+}
+
+/* MAIN GRID */
 
 .main-grid{
     display:grid;
-    grid-template-columns:300px 1fr 350px;
+    grid-template-columns:280px 1fr 320px;
     gap:20px;
     padding:20px;
     min-height:650px;
 }
 
+/* PANELS */
+
 .sidebar,
 .canvas-area,
-.ai-panel{
+.ai-panel,
+.how-it-works,
+.saved-outfits{
     background:#131a2b;
     border-radius:20px;
     padding:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.25);
 }
+
+.sidebar h2,
+.canvas-area h2,
+.ai-panel h2{
+    margin-top:0;
+}
+
+/* BOTTOM GRID */
 
 .bottom-grid{
     display:grid;
@@ -39,8 +86,137 @@ body{
 
 .how-it-works,
 .saved-outfits{
-    background:#131a2b;
-    border-radius:20px;
-    padding:20px;
     min-height:200px;
+}
+
+/* AVATAR SECTION */
+
+.canvas-area{
+    text-align:center;
+}
+
+.avatar-selector{
+    margin-bottom:20px;
+}
+
+.avatar-selector button{
+    background:#2b3248;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    margin:0 5px;
+    transition:0.3s;
+}
+
+.avatar-selector button:hover{
+    background:#4b5563;
+}
+
+.active-avatar{
+    background:#7c3aed !important;
+}
+
+.avatar{
+    display:block;
+    height:550px;
+    margin:auto;
+    object-fit:contain;
+    transition:0.3s;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#131a2b;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#7c3aed;
+    border-radius:10px;
+}
+
+
+
+.upload-box{
+    border:2px dashed #7c3aed;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.upload-box input{
+    width:100%;
+}
+
+.filters{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.filters button{
+    background:#2b3248;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.filters button:hover{
+    background:#7c3aed;
+}
+
+#clothesContainer{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.clothing-card{
+    background:#1b2236;
+    border-radius:15px;
+    padding:10px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.clothing-card img{
+    width:100%;
+    height:150px;
+    object-fit:contain;
+}
+
+.clothing-card p{
+    margin:10px 0 0;
+}
+
+.avatar-container{
+    position:relative;
+    width:400px;
+    margin:auto;
+}
+
+.top-layer{
+    position:absolute;
+    top:70px;
+    left:50%;
+    transform:translateX(-50%);
+    width:240px;
+    display:none;
+}
+
+.bottom-layer{
+    position:absolute;
+    top:280px;
+    left:50%;
+    transform:translateX(-50%);
+    width:220px;
+    display:none;
 }
